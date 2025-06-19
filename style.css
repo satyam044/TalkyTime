@@ -114,6 +114,7 @@ header {
 
 /* User Page */
 .userTop{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,6 +137,23 @@ header {
 }
 .userR i:hover{
     color: #1500ff;
+}
+.userR button{
+    background-color: #6c61e6;
+    padding: 10px;
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+}
+.userR button.active{
+    display: block;
+}
+.userR button a{
+    text-decoration: none;
+    color: white;
 }
 
 .users{
