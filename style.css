@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-    max-height: 500px;
+    height: 500px;
     overflow-x: hidden;
     overflow-y: auto;
     width: 100%;
@@ -214,6 +214,7 @@ header {
 
 /* Chat */
 .chatWrap{
+    overflow: hidden;
     padding: 0;
     background-color: #a09ae1;
 }
@@ -280,12 +281,15 @@ header {
 }
 
 .chatSend{
+    width: 100%;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     padding-top: 2px;
+    position: absolute;
+    bottom: 0px;
 }
 .chatInput{
     width: 80%;
@@ -307,7 +311,7 @@ header {
     border: none;
     outline: none;
 }
-.chatSend>i{
+.chatSend>button{
     padding: 10px;
     background-color: #fff;
     color: #1500ff;

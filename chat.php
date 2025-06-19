@@ -12,9 +12,9 @@
             include_once "php/config.php";
             $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE Unique_ID = {$user_id}");
-            if (mysqli_num_rows($sql) > 0) {
-                $row = mysqli_fetch_assoc($sql);
-            }
+                if (mysqli_num_rows($sql) > 0) {
+                    $row = mysqli_fetch_assoc($sql);
+                }
             ?>
             <div class="chatHeader">
                 <a href="users.php"><i class="fa-solid fa-arrow-left"></i></a>
@@ -25,14 +25,6 @@
                 </div>
             </div>
             <div class="chatMsg">
-                <div class="chatLeft">Your Message</div>
-                <div class="chatLeft">Your Message</div>
-                <div class="chatRight">My M</div>
-                <div class="chatRight">My M</div>
-                <div class="chatLeft">Your Message</div>
-                <div class="chatLeft">Your Message</div>
-                <div class="chatLeft">Your Message</div>
-                <div class="chatRight">My M</div>
             </div>
             <form action="#" class="chatSend">
                 <div class="chatInput">
