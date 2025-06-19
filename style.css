@@ -156,18 +156,17 @@ header {
     font-size: 16px;
 }
 .users .userSearch input{
-    width: 80%;
+    width: 75%;
     padding: 10px;
     border: none;
     outline: none;
     border-radius: 20px;
-    display: none;
-}
-.users .userSearch p.active{
-    display: none;
+    position: absolute;
+    left: 1rem;
+    opacity: 0;
 }
 .users .userSearch input.active{
-    display: block;
+    opacity: 1;
 }
 .users .userSearch i.active{
     background-color: #7b70ee;

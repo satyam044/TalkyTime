@@ -33,6 +33,7 @@
                     <input type="text" name="search" placeholder="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <div class="userList"></div>
             </div>
         </section>
     </div>
