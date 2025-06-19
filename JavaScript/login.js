@@ -24,4 +24,3 @@ form.addEventListener("submit", (e) => {
     let formData = new FormData(form);
     xhr.send(formData);
 });
-// 1:35

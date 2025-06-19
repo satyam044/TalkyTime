@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>TalkyTime</title>
-</head>
-
+<?php
+    session_start();
+    if(!isset($_SESSION['Unique_ID'])){
+        header("location: login.php");
+    }
+?>
+<?php include_once "header.php" ?>
 <body>
     <div class="wrapper">
         <section class="user">
+            <?php
+            include_once "php/config.php";
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE Unique_ID = {$_SESSION['Unique_ID']}");
+            if (mysqli_num_rows($sql) > 0) {
+                $row = mysqli_fetch_assoc($sql);
+            }
+            ?>
             <div class="userTop">
                 <div class="userL">
-                    <h2 class="userName">Hello</h2>
-                    <p class="userStatus">Active Now</p>
+                    <img src="php/images/<?php echo $row['Image'] ?>" alt="">
+                    <div class="userDetails">
+                        <h2 class="userName"><?php echo ucwords($row['Fname'] . " " . $row['Lname']) ?></h2>
+                        <p class="userStatus"><?php echo $row['status'] ?></p>
+                    </div>
                 </div>
                 <div class="userR">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
