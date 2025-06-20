@@ -25,7 +25,7 @@
                 </div>
                 <div class="userR">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
-                    <button><a href="php/logout.php?logout_id=<?php echo $row['Unique_ID'] ?>">Logout</a></button>
+                    <button><a href="./php/logout.php?logout_id=<?php echo $row['Unique_ID'] ?>">Logout</a></button>
                 </div>
             </div>
             <div class="users">

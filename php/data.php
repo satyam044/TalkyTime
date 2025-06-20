@@ -14,7 +14,7 @@
         }
         $msg = (strlen($result) > 12) ? substr($result, 0, 12).'...' : $result;
         ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
-        $output .= '<a href="chat.php?user_id='.$row['Unique_ID'].'">
+        $output .= '<a href="chat.php?uid='.$row['Unique_ID'].'">
                     <div class="content">
                         <img src="php/images/'. $row['Image'] .'" alt="">
                         <div class="userDetails">                            
