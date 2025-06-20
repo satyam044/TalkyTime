@@ -201,8 +201,8 @@ header {
 }
 .users a .content{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1.4rem;
     padding: 10px 4px;
     border-bottom: 1px solid black;
 }
@@ -227,11 +227,6 @@ header {
 .users a .content .userDetails i.offline{
     color: #807c7c67;
     scale: 0.7;
-}
-.users a .content span{
-    color: #807c7c;
-    font-size: 14px;
-    margin-top: -20px;
 }
 
 /* Chat */
@@ -319,6 +314,7 @@ header {
     background-color: #fff;
     border-radius:20px ;
     display: flex;
+    overflow: hidden;
 }
 .chatInput i{
     padding: 10px;
@@ -328,6 +324,7 @@ header {
     cursor: pointer;
     border-right: 1px solid black;
     color: #1500ff;
+    background-color: unset;
 }
 .chatInput input{
     padding: 10px;
@@ -340,4 +337,31 @@ header {
     color: #1500ff;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper{
+        height: 100dvh !important;
+        width: 100vw !important;
+        max-width: unset;
+        max-height: unset;
+        border-radius: unset;
+    }
+    .userL{
+        font-size: 12px;
+    }
+    .userL img{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .users .userSearch i{
+        position: relative;
+        left: 1rem;
+    }
+    .chatMsg{
+        height: 85dvh !important;
+    }
+    .chatHeader{
+        border-radius: unset;
+    }
 }

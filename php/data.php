@@ -21,7 +21,6 @@
                             <h4>'. ucwords($row['Fname'] . " " . $row['Lname']) .' <i class="fa-solid fa-circle '.$offline.' "></i></h4>
                             <p>'. $you . $msg .'</p>
                         </div>
-                        <span>12:00 pm</span>
                     </div>
                 </a>';
     }

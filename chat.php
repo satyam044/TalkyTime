@@ -38,6 +38,7 @@
         </section>
     </div>
 
+    <script src="JavaScript/microphone.js"></script>
     <script src="JavaScript/chat.js"></script>
 </body>
 
